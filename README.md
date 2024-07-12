@@ -64,4 +64,12 @@ Ensure you have the following installed:
 To start the solution submission process, run:
 
 ```sh
-python main.py
+python leetcoder.py
+
+
+### Scrap Solutions
+
+For Scraping New Solutions, run:
+
+```sh
+python leetscraper.py
