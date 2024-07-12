@@ -1,0 +1,5 @@
+{
+    "problemName": "implement-magic-dictionary",
+    "language": "cpp",
+    "code": "buildDict(dictionary: List[str])"
+}

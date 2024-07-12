@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-even-and-odd-bits",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   vector < int >  evenOddBit ( int  n )  {   vector < int >  ans ( 2 );   int  i  =  0 ;    while  ( n  >  0 )  {   ans [ i ]  +=  n  &  1 ;   n  >>=  1 ;   i  ^=  1 ;   }   return  ans ;   }  }; "
+}

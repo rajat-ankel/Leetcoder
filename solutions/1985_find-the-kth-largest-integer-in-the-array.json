@@ -1,0 +1,5 @@
+{
+    "problemName": "find-the-kth-largest-integer-in-the-array",
+    "language": "cpp",
+    "code": "class  Solution  {   public :     string  kthLargestNumber ( vector < string >&  nums ,  int  k )  {   auto  compare  =  []( const  string &  a ,  const  string &  b )  {   return  a . length ()  ==  b . length ()  ?  a  >  b  :  a . length ()  >  b . length ();   };   priority_queue < string ,  vector < string > ,  decltype ( compare ) >  minHeap ( compare );   for  ( const  string &  num  :  nums )  {   minHeap . push ( num );   if  ( minHeap . size ()  >  k )   minHeap . pop ();   }   return  minHeap . top ();   }  }; "
+}

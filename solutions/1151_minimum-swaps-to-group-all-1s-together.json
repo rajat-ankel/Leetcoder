@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-swaps-to-group-all-1s-together",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minSwaps ( vector < int >&  data )  {   const  int  k  =  ranges :: count ( data ,  1 );   int  ones  =  0 ;    int  maxOnes  =  0 ;    for  ( int  i  =  0 ;  i  <  data . size ();  ++ i )  {   if  ( i  >=  k  &&  data [ i  -  k ])   -- ones ;   if  ( data [ i ])   ++ ones ;   maxOnes  =  max ( maxOnes ,  ones );   }   return  k  -  maxOnes ;   }  }; "
+}

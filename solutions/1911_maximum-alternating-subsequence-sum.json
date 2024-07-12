@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-alternating-subsequence-sum",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  maxAlternatingSum ( vector < int >&  nums )  {   long  even  =  0 ;    long  odd  =  0 ;    for  ( const  int  num  :  nums )  {   even  =  max ( even ,  odd  +  num );   odd  =  even  -  num ;   }   return  even ;   }  }; "
+}

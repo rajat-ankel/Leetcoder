@@ -1,0 +1,5 @@
+{
+    "problemName": "stock-price-fluctuation",
+    "language": "cpp",
+    "code": "update(timestamp: int, price: int)"
+}

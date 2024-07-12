@@ -1,0 +1,5 @@
+{
+    "problemName": "analyze-user-website-visit-pattern",
+    "language": "cpp",
+    "code": "class  Solution :  def  mostVisitedPattern ( self ,  username :  List [ str ],  timestamp :  List [ int ],  website :  List [ str ])  ->  List [ str ]:  userToSites  =  collections . defaultdict ( list )   for  user ,  _ ,  site  in  sorted ( zip ( username ,  timestamp ,  website ),  key = lambda  x :  ( x [ 1 ])):  userToSites [ user ] . append ( site )   patternCount  =  collections . Counter ()  for  user ,  sites  in  userToSites . items ():  patternCount . update ( Counter ( set ( itertools . combinations ( sites ,  3 ))))  return  max ( sorted ( patternCount ),  key = patternCount . get ) "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "add-bold-tag-in-string",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  addBoldTag ( string  s ,  vector < string >&  words )  {   const  int  n  =  s . length ();   string  ans ;     vector < bool >  bold ( n );   int  boldEnd  =  -1 ;    for  ( int  i  =  0 ;  i  <  n ;  ++ i )  {   for  ( const  string &  word  :  words )   if  ( s . substr ( i ). find ( word )  ==  0 )    boldEnd  =  max ( boldEnd ,  i  +  static_cast < int > ( word . length ()));   bold [ i ]  =  boldEnd  >  i ;   }     int  i  =  0 ;   while  ( i  <  n )   if  ( bold [ i ])  {   int  j  =  i ;   while  ( j  <  n  &&  bold [ j ])   ++ j ;     ans  +=  \"<b>\"  +  s . substr ( i ,  j  -  i )  +  \"</b>\" ;   i  =  j ;   }  else  {   ans  +=  s [ i ++ ];   }   return  ans ;   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "counter",
+    "language": "cpp",
+    "code": "function  createCounter ( n :  number ) :  ()  =>  number  {   return  function  ()  {   return  n ++ ;   };  } "
+}

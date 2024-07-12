@@ -1,0 +1,5 @@
+{
+    "problemName": "design-authentication-manager",
+    "language": "cpp",
+    "code": "generate(tokenId: str, currentTime: int)"
+}

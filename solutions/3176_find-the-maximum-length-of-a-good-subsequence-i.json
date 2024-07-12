@@ -1,0 +1,5 @@
+{
+    "problemName": "find-the-maximum-length-of-a-good-subsequence-i",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maximumLength ( vector < int >&  nums ,  int  k )  {       vector < unordered_map < int ,  int >>  dp ( k  +  1 );       vector < int >  maxLen ( k  +  1 );   for  ( const  int  num  :  nums )   for  ( int  count  =  k ;  count  >=  0 ;  -- count )  {     ++ dp [ count ][ num ];   if  ( count  >  0 )   dp [ count ][ num ]  =  max ( dp [ count ][ num ],  maxLen [ count  -  1 ]  +  1 );   maxLen [ count ]  =  max ( maxLen [ count ],  dp [ count ][ num ]);   }   return  maxLen [ k ];   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-height-of-a-triangle",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maxHeightOfTriangle ( int  red ,  int  blue )  {   return  max ( maxHeight ( red ,  blue ),  maxHeight ( blue ,  red ));   }   private :       int  maxHeight ( int  n1 ,  int  n2 )  {         const  int  oddHeight  =  sqrt ( 4  *  n1 )  -  1 ;         const  int  evenHeight  =  sqrt ( 4  *  n2  +  1 )  -  1 ;       return  min ( oddHeight ,  evenHeight )  +   ( abs ( oddHeight  -  evenHeight )  >=  1  ?  1  :  0 );   }  }; "
+}

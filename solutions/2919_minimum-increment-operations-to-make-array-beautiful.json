@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-increment-operations-to-make-array-beautiful",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  minIncrementOperations ( std :: vector < int >&  nums ,  int  k )  {     long  prev3  =  0 ;     long  prev2  =  0 ;     long  prev1  =  0 ;   for  ( const  int &  num  :  nums )  {   const  long  dp  =  min ({ prev1 ,  prev2 ,  prev3 })  +  max ( 0 ,  k  -  num );   prev3  =  prev2 ;   prev2  =  prev1 ;   prev1  =  dp ;   }   return  min ({ prev1 ,  prev2 ,  prev3 });   }  }; "
+}

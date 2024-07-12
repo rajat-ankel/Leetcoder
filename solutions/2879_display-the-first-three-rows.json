@@ -1,0 +1,5 @@
+{
+    "problemName": "display-the-first-three-rows",
+    "language": "cpp",
+    "code": "import  pandas  as  pd  def  selectFirstRows ( employees :  pd . DataFrame )  ->  pd . DataFrame :  return  employees . head ( 3 ) "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "check-if-two-string-arrays-are-equivalent",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  arrayStringsAreEqual ( std :: vector < std :: string >&  word1 ,   std :: vector < std :: string >&  word2 )  {   int  i  =  0 ;    int  j  =  0 ;    int  a  =  0 ;    int  b  =  0 ;    while  ( i  <  word1 . size ()  &&  j  <  word2 . size ())  {   if  ( word1 [ i ][ a ]  !=  word2 [ j ][ b ])   return  false ;   if  ( ++ a  ==  word1 [ i ]. size ())  {   ++ i ;   a  =  0 ;   }   if  ( ++ b  ==  word2 [ j ]. size ())  {   ++ j ;   b  =  0 ;   }   }   return  i  ==  word1 . size ()  &&  j  ==  word2 . size ();   }  }; "
+}

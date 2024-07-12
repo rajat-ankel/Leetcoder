@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-achievable-transfer-requests",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maximumRequests ( int  n ,  vector < vector < int >>&  requests )  {   int  ans  =  0 ;   vector < int >  degrees ( n );    function < void ( int ,  int ) >  dfs  =  [ & ]( int  i ,  int  processedReqs )  {   if  ( i  ==  requests . size ())  {   if  ( ranges :: all_of ( degrees ,  []( int  d )  {  return  d  ==  0 ;  }))   ans  =  max ( ans ,  processedReqs );   return ;   }     dfs ( i  +  1 ,  processedReqs );     -- degrees [ requests [ i ][ 0 ]];   ++ degrees [ requests [ i ][ 1 ]];   dfs ( i  +  1 ,  processedReqs  +  1 );   -- degrees [ requests [ i ][ 1 ]];   ++ degrees [ requests [ i ][ 0 ]];   };   dfs ( 0 ,  0 );   return  ans ;   }  }; "
+}

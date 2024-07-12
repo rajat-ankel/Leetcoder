@@ -1,0 +1,5 @@
+{
+    "problemName": "find-the-minimum-possible-sum-of-a-beautiful-array",
+    "language": "cpp",
+    "code": "class  Solution  {   public :     int  minimumPossibleSum ( int  n ,  int  target )  {             const  int  mid  =  target  /  2 ;   if  ( n  <=  mid )   return  trapezoid ( 1 ,  n );   return  ( trapezoid ( 1 ,  mid )  +  trapezoid ( target ,  target  +  ( n  -  mid  -  1 )))  %   kMod ;   }   private :   static  constexpr  int  kMod  =  1'000'000'007 ;     long  trapezoid ( long  a ,  long  b )  {   return  ( a  +  b )  *  ( b  -  a  +  1 )  /  2 ;   }  }; "
+}

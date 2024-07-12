@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-people-that-can-be-caught-in-tag",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  catchMaximumAmountofPeople ( vector < int >&  team ,  int  dist )  {   int  ans  =  0 ;   int  i  =  0 ;    int  j  =  0 ;    while  ( i  <  team . size ()  &&  j  <  team . size ())   if  ( i  +  dist  <  j  ||  team [ i ]  !=  0 )  {     ++ i ;   }  else  if  ( j  +  dist  <  i  ||  team [ j ]  !=  1 )  {     ++ j ;   }  else  {     ++ ans ;   ++ i ;   ++ j ;   }   return  ans ;   }  }; "
+}

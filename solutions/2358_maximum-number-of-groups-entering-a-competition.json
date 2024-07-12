@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-groups-entering-a-competition",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maximumGroups ( vector < int >&  grades )  {                       return  sqrt ( grades . size ()  *  2  +  0.25 )  -  0.5 ;   }  }; "
+}

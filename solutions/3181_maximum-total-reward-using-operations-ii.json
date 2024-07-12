@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-total-reward-using-operations-ii",
+    "language": "cpp",
+    "code": "class  Solution  {   public :     int  maxTotalReward ( vector < int >&  rewardValues )  {   constexpr  int  kPossibleRewards  =  100'000 ;     bitset < kPossibleRewards >  dp ;   dp [ 0 ]  =  true ;   ranges :: sort ( rewardValues );   for  ( const  int  num  :  rewardValues )  {   bitset < kPossibleRewards >  newBits  =  dp ;     newBits  <<=  kPossibleRewards  -  num ;   newBits  >>=  kPossibleRewards  -  num ;   dp  |=  newBits  <<  num ;   }   for  ( int  ans  =  kPossibleRewards  -  1 ;  ans  >=  0 ;  -- ans )   if  ( dp [ ans ])   return  ans ;   throw ;   }  }; "
+}

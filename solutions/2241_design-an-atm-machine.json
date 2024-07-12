@@ -1,0 +1,5 @@
+{
+    "problemName": "design-an-atm-machine",
+    "language": "cpp",
+    "code": "deposit(banknotesCount: List[int])"
+}

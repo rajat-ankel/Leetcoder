@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-upgradable-servers",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   vector < int >  maxUpgrades ( vector < int >&  count ,  vector < int >&  upgrade ,   vector < int >&  sell ,  vector < int >&  money )  {         vector < int >  ans ;   for  ( int  i  =  0 ;  i  <  count . size ();  ++ i )   ans . push_back ( min (   count [ i ],   static_cast < int > (( money [ i ]  +  static_cast < long > ( count [ i ])  *  sell [ i ])  /   ( sell [ i ]  +  upgrade [ i ]))));   return  ans ;   }  }; "
+}

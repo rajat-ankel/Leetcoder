@@ -1,0 +1,5 @@
+{
+    "problemName": "subarray-with-elements-greater-than-varying-threshold",
+    "language": "cpp",
+    "code": "class  Solution  {   public :     int  validSubarraySize ( vector < int >&  nums ,  int  threshold )  {   const  int  n  =  nums . size ();     vector < int >  prev ( n ,  -1 );     vector < int >  next ( n ,  n );   stack < int >  stack ;   for  ( int  i  =  0 ;  i  <  n ;  ++ i )  {   while  ( ! stack . empty ()  &&  nums [ stack . top ()]  >  nums [ i ])  {   const  int  index  =  stack . top ();   stack . pop ();   next [ index ]  =  i ;   }   if  ( ! stack . empty ())   prev [ i ]  =  stack . top ();   stack . push ( i );   }   for  ( int  i  =  0 ;  i  <  n ;  ++ i )  {     const  int  k  =  ( i  -  prev [ i ])  +  ( next [ i ]  -  i )  -  1 ;   if  ( nums [ i ]  >  threshold  /  static_cast < double > ( k ))   return  k ;   }   return  -1 ;   }  }; "
+}

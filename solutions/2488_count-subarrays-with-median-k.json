@@ -1,0 +1,5 @@
+{
+    "problemName": "count-subarrays-with-median-k",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  countSubarrays ( vector < int >&  nums ,  int  k )  {   const  int  kIndex  =  find ( nums . begin (),  nums . end (),  k )  -  nums . begin ();   int  ans  =  0 ;   unordered_map < int ,  int >  count ;   for  ( int  i  =  kIndex ,  balance  =  0 ;  i  >=  0 ;  -- i )  {   if  ( nums [ i ]  <  k )   -- balance ;   else  if  ( nums [ i ]  >  k )   ++ balance ;   ++ count [ balance ];   }   for  ( int  i  =  kIndex ,  balance  =  0 ;  i  <  nums . size ();  ++ i )  {   if  ( nums [ i ]  <  k )   -- balance ;   else  if  ( nums [ i ]  >  k )   ++ balance ;       ans  +=  count [ - balance ]  +  count [ 1  -  balance ];   }   return  ans ;   }  }; "
+}

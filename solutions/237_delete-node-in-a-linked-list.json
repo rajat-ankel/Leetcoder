@@ -1,0 +1,5 @@
+{
+    "problemName": "delete-node-in-a-linked-list",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   void  deleteNode ( ListNode *  node )  {   node -> val  =  node -> next -> val ;   node -> next  =  node -> next -> next ;   }  }; "
+}

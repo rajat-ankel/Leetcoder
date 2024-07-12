@@ -1,0 +1,5 @@
+{
+    "problemName": "find-the-child-who-has-the-ball-after-k-seconds",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  numberOfChild ( int  n ,  int  k )  {     const  int  roundTime  =  2  *  ( n  -  1 );   const  int  pos  =  k  %  roundTime ;   return  pos  <  n  ?  pos  :  roundTime  -  pos ;   }  }; "
+}

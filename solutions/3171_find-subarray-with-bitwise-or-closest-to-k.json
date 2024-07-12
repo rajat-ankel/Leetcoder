@@ -1,0 +1,5 @@
+{
+    "problemName": "find-subarray-with-bitwise-or-closest-to-k",
+    "language": "cpp",
+    "code": "class  Solution  {   public :     int  minimumDifference ( vector < int >&  nums ,  int  k )  {   int  ans  =  INT_MAX ;     unordered_set < int >  prev ;   for  ( const  int  num  :  nums )  {   unordered_set < int >  next { num };         for  ( const  int  val  :  prev )   next . insert ( val  &  num );   for  ( const  int  val  :  next )   ans  =  min ( ans ,  abs ( k  -  val ));   prev  =  move ( next );   }   return  ans ;   }  }; "
+}

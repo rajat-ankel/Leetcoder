@@ -1,0 +1,5 @@
+{
+    "problemName": "flip-game-ii",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  canWin ( string  currentState )  {   const  auto  it  =  mem . find ( currentState );   if  ( it  ==  mem . cend ())   return  it -> second ;       for  ( int  i  =  0 ;  i  +  1  <  currentState . length ();  ++ i )   if  ( currentState [ i ]  ==  '+'  &&  currentState [ i  +  1 ]  ==  '+'  &&   ! canWin ( currentState . substr ( 0 ,  i )  +  '-'  +  currentState . substr ( i  +  2 )))   return  mem [ currentState ]  =  true ;   return  mem [ currentState ]  =  false ;   }   private :   unordered_map < string ,  bool >  mem ;  }; "
+}

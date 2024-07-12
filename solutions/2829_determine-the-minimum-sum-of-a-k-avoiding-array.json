@@ -1,0 +1,5 @@
+{
+    "problemName": "determine-the-minimum-sum-of-a-k-avoiding-array",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minimumSum ( int  n ,  int  k )  {             const  int  mid  =  k  /  2 ;    if  ( n  <=  mid )   return  trapezoid ( 1 ,  n );   return  trapezoid ( 1 ,  mid )  +  trapezoid ( k ,  k  +  ( n  -  mid  -  1 ));   }   private :     int  trapezoid ( int  a ,  int  b )  {   return  ( a  +  b )  *  ( b  -  a  +  1 )  /  2 ;   }  }; "
+}

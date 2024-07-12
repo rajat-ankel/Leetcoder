@@ -1,0 +1,5 @@
+{
+    "problemName": "find-three-consecutive-integers-that-sum-to-a-given-number",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   vector < long  long >  sumOfThree ( long  long  num )  {   if  ( num  %  3 )   return  {};   const  long  x  =  num  /  3 ;   return  { x  -  1 ,  x ,  x  +  1 };   }  }; "
+}

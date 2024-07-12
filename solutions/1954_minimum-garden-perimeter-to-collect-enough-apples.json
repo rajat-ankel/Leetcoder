@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-garden-perimeter-to-collect-enough-apples",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  minimumPerimeter ( long  long  neededApples )  {   long  l  =  1 ;   long  r  =  100'000 ;    while  ( l  <  r )  {   const  long  m  =  ( l  +  r )  /  2 ;   if  ( numApples ( m )  >=  neededApples )   r  =  m ;   else   l  =  m  +  1 ;   }   return  l  *  8 ;   }   private :                                         long  numApples ( long  k )  {   return  2  *  k  *  ( k  +  1 )  *  ( 2  *  k  +  1 );   }  }; "
+}

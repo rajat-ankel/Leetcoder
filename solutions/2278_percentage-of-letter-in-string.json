@@ -1,0 +1,5 @@
+{
+    "problemName": "percentage-of-letter-in-string",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  percentageLetter ( string  s ,  char  letter )  {   return  100  *  ranges :: count ( s ,  letter )  /  s . length ();   }  }; "
+}

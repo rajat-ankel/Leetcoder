@@ -1,0 +1,5 @@
+{
+    "problemName": "design-graph-with-shortest-path-calculator",
+    "language": "cpp",
+    "code": "shortestPath(node1: int, node2: int)"
+}

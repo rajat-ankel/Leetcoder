@@ -1,0 +1,5 @@
+{
+    "problemName": "count-the-number-of-good-partitions",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  numberOfGoodPartitions ( vector < int >&  nums )  {   constexpr  int  kMod  =  1'000'000'007 ;   int  ans  =  1 ;     unordered_map < int ,  int >  lastSeen ;   for  ( int  i  =  0 ;  i  <  nums . size ();  ++ i )   lastSeen [ nums [ i ]]  =  i ;         int  maxRight  =  0 ;   for  ( int  i  =  0 ;  i  <  nums . size ();  ++ i )  {   if  ( i  >  maxRight )       ans  =  ( ans  *  2L )  %  kMod ;   maxRight  =  max ( maxRight ,  lastSeen [ nums [ i ]]);   }   return  ans ;   }  }; "
+}

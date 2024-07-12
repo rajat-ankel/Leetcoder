@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-binary-string-after-change",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  maximumBinaryString ( string  binary )  {           const  int  zeros  =  ranges :: count ( binary ,  '0' );   const  int  prefixOnes  =  binary . find ( '0' );     binary . assign ( binary . length (),  '1' );     if  ( prefixOnes  !=  string :: npos )   binary [ prefixOnes  +  zeros  -  1 ]  =  '0' ;   return  binary ;   }  }; "
+}

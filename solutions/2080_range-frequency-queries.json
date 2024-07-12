@@ -1,0 +1,5 @@
+{
+    "problemName": "range-frequency-queries",
+    "language": "cpp",
+    "code": "query(left: int, right: int, value: int)"
+}

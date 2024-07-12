@@ -1,0 +1,5 @@
+{
+    "problemName": "sort-array-by-moving-items-to-empty-space",
+    "language": "cpp",
+    "code": "class  Solution :  def  sortArray ( self ,  nums :  List [ int ])  ->  int :  n  =  len ( nums )  numToIndex  =  [ 0 ]  *  n  for  i ,  num  in  enumerate ( nums ):  numToIndex [ num ]  =  i  def  minOps ( numToIndex :  List [ int ],  zeroInBeginning :  bool )  ->  int :  ops  =  0  num  =  1    offset  =  0  if  zeroInBeginning  else  1  while  num  <  n :   if  zeroInBeginning  and  numToIndex [ 0 ]  ==  0  or \\ not  zeroInBeginning  and  numToIndex [ 0 ]  ==  n  -  1 :  while  numToIndex [ num ]  ==  num  -  offset :   num  +=  1  if  num  ==  n :  return  ops  numInWrongIndex  =  num    else :  numInWrongIndex  =  numToIndex [ 0 ]  +  offset  numToIndex [ 0 ],  numToIndex [ numInWrongIndex ]  = \\ numToIndex [ numInWrongIndex ],  numToIndex [ 0 ]  ops  +=  1  return  min ( minOps ( numToIndex . copy (),  True ),  minOps ( numToIndex . copy (),  False )) "
+}

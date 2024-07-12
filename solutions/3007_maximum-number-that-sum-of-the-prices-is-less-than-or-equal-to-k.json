@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  findMaximumNumber ( long  long  k ,  int  x )  {   long  l  =  1 ;   long  r  =  1e15 ;   while  ( l  <  r )  {   const  long  m  =  ( l  +  r  +  1 )  /  2 ;   if  ( getSumPrices ( m ,  x )  >  k )   r  =  m  -  1 ;   else   l  =  m ;   }   return  l ;   }   private :     long  getSumPrices ( long  num ,  int  x )  {   long  sumPrices  =  0 ;     ++ num ;   for  ( int  i  =  leftmostColumnIndex ( num );  i  >  0 ;  -- i )     if  ( i  %  x  ==  0 )  {   const  long  groupSize  =  1L  <<  i ;   const  long  halfGroupSize  =  1L  <<  i  -  1 ;   sumPrices  +=  num  /  groupSize  *  halfGroupSize ;   sumPrices  +=  max ( 0L ,  ( num  %  groupSize )  -  halfGroupSize );   }   return  sumPrices ;   }     int  leftmostColumnIndex ( long  num )  {   return  63  -  __builtin_clzl ( num )  +  1 ;   }  }; "
+}

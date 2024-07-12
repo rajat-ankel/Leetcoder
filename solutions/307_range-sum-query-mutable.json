@@ -1,0 +1,5 @@
+{
+    "problemName": "range-sum-query-mutable",
+    "language": "cpp",
+    "code": "sumRange(left: int, right: int)"
+}

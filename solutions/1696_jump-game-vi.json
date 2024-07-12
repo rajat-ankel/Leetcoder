@@ -1,0 +1,5 @@
+{
+    "problemName": "jump-game-vi",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maxResult ( vector < int >&  nums ,  int  k )  {     deque < int >  maxQ { 0 };     vector < int >  dp ( nums . size ());   dp [ 0 ]  =  nums [ 0 ];   for  ( int  i  =  1 ;  i  <  nums . size ();  ++ i )  {     if  ( maxQ . front ()  +  k  <  i )   maxQ . pop_front ();   dp [ i ]  =  dp [ maxQ . front ()]  +  nums [ i ];     while  ( ! maxQ . empty ()  &&  dp [ maxQ . back ()]  <=  dp [ i ])   maxQ . pop_back ();   maxQ . push_back ( i );   }   return  dp . back ();   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-array-length-after-pair-removals",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minLengthAfterRemovals ( vector < int >&  nums )  {   const  int  n  =  nums . size ();   unordered_map < int ,  int >  count ;   int  maxFreq  =  0 ;   for  ( const  int  num  :  nums )   ++ count [ num ];   for  ( const  auto &  [ _ ,  freq ]  :  count )   maxFreq  =  max ( maxFreq ,  freq );     if  ( maxFreq  <=  n  /  2 )   return  n  %  2 ;     return  maxFreq  -  ( n  -  maxFreq );   }  }; "
+}

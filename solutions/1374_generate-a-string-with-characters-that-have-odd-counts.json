@@ -1,0 +1,5 @@
+{
+    "problemName": "generate-a-string-with-characters-that-have-odd-counts",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  generateTheString ( int  n )  {   string  s ( n ,  'a' );   if  ( n  %  2  ==  0 )   s . back ()  =  'b' ;   return  s ;   }  }; "
+}

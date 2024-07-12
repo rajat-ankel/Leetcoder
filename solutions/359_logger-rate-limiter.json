@@ -1,0 +1,5 @@
+{
+    "problemName": "logger-rate-limiter",
+    "language": "cpp",
+    "code": "shouldPrintMessage(timestamp: int, message: str)"
+}

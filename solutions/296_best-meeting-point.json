@@ -1,0 +1,5 @@
+{
+    "problemName": "best-meeting-point",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minTotalDistance ( vector < vector < int >>&  grid )  {   const  int  m  =  grid . size ();   const  int  n  =  grid [ 0 ]. size ();   vector < int >  I ;    vector < int >  J ;    for  ( int  i  =  0 ;  i  <  m ;  ++ i )   for  ( int  j  =  0 ;  j  <  n ;  ++ j )   if  ( grid [ i ][ j ])   I . push_back ( i );   for  ( int  j  =  0 ;  j  <  n ;  ++ j )   for  ( int  i  =  0 ;  i  <  m ;  ++ i )   if  ( grid [ i ][ j ])   J . push_back ( j );     return  minTotalDistance ( I )  +  minTotalDistance ( J );   }   private :   int  minTotalDistance ( const  vector < int >&  grid )  {   int  sum  =  0 ;   int  i  =  0 ;   int  j  =  grid . size ()  -  1 ;   while  ( i  <  j )   sum  +=  grid [ j -- ]  -  grid [ i ++ ];   return  sum ;   }  }; "
+}

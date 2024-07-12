@@ -1,0 +1,5 @@
+{
+    "problemName": "find-minimum-operations-to-make-all-elements-divisible-by-three",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minimumOperations ( vector < int >&  nums )  {   return  ranges :: count_if ( nums ,  []( int  num )  {  return  num  %  3  !=  0 ;  });   }  }; "
+}

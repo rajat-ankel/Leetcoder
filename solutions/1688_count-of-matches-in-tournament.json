@@ -1,0 +1,5 @@
+{
+    "problemName": "count-of-matches-in-tournament",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  numberOfMatches ( int  n )  {   return  n  -  1 ;   }  }; "
+}

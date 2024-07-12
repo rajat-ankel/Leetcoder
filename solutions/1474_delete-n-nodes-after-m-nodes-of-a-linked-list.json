@@ -1,0 +1,5 @@
+{
+    "problemName": "delete-n-nodes-after-m-nodes-of-a-linked-list",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   ListNode *  deleteNodes ( ListNode *  head ,  int  m ,  int  n )  {   ListNode *  curr  =  head ;   ListNode *  prev  =  nullptr ;    while  ( curr  !=  nullptr )  {     for  ( int  i  =  0 ;  i  <  m  &  curr  !=  nullptr ;  ++ i )  {   prev  =  curr ;   curr  =  curr -> next ;   }     for  ( int  i  =  0 ;  i  <  n  &&  curr  !=  nullptr ;  ++ i )   curr  =  curr -> next ;     prev -> next  =  curr ;   }   return  head ;   }  }; "
+}

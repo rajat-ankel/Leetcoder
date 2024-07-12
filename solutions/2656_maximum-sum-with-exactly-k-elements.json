@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-sum-with-exactly-k-elements",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maximizeSum ( vector < int >&  nums ,  int  k )  {     const  int  x  =  ranges :: max ( nums );   return  x  *  k  +  k  *  ( k  -  1 )  /  2 ;   }  }; "
+}

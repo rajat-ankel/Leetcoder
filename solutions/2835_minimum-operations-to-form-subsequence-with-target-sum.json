@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-operations-to-form-subsequence-with-target-sum",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minOperations ( vector < int >&  nums ,  int  target )  {   constexpr  int  kNoMissingBit  =  31 ;   constexpr  int  maxBit  =  31 ;   int  ans  =  0 ;   int  minMissingBit  =  kNoMissingBit ;     vector < int >  count ( maxBit  +  1 );   for  ( const  int  num  :  nums )   ++ count [ static_cast < int > ( log2 ( num ))];   for  ( int  bit  =  0 ;  bit  <  maxBit ;  ++ bit )  {     if  ( target  >>  bit  &  1 )  {     if  ( count [ bit ]  >  0 )   -- count [ bit ];   else   minMissingBit  =  min ( minMissingBit ,  bit );   }     if  ( minMissingBit  !=  kNoMissingBit  &&  count [ bit ]  >  0 )  {   -- count [ bit ];     ans  +=  bit  -  minMissingBit ;   minMissingBit  =  kNoMissingBit ;   }     count [ bit  +  1 ]  +=  count [ bit ]  /  2 ;   }     return  minMissingBit  ==  kNoMissingBit  ?  ans  :  -1 ;   }  }; "
+}

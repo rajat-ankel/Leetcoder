@@ -1,0 +1,5 @@
+{
+    "problemName": "pizza-with-3n-slices",
+    "language": "cpp",
+    "code": "class  Solution :  def  maxSizeSlices ( self ,  slices :  List [ int ])  ->  int :  @functools . lru_cache ( None )  def  dp ( i :  int ,  j :  int ,  k :  int )  ->  int :   \"\"\"  Returns the maximum the sum of slices if you can pick k slices from  slices[i..j).  \"\"\"  if  k  ==  1 :  return  max ( slices [ i : j ])        if  j  -  i  <  2  *  k  -  1 :  return  - math . inf  return  max ( slices [ i ]  +  dp ( i  +  2 ,  j ,  k  -  1 ),  dp ( i  +  1 ,  j ,  k ))  k  =  len ( slices )  //  3  return  max ( dp ( 0 ,  len ( slices )  -  1 ,  k ),  dp ( 1 ,  len ( slices ),  k )) "
+}

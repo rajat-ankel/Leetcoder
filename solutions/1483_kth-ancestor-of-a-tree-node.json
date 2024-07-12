@@ -1,0 +1,5 @@
+{
+    "problemName": "kth-ancestor-of-a-tree-node",
+    "language": "cpp",
+    "code": "class  TreeAncestor  {   public :   TreeAncestor ( int  n ,  vector < int >&  parent )   :  maxLevel ( 32  -  __builtin_clz ( n )),  dp ( n ,  vector < int > ( maxLevel ))  {   for  ( int  i  =  0 ;  i  <  n ;  ++ i )   for  ( int  j  =  0 ;  j  <  maxLevel ;  ++ j )   if  ( j  ==  0 )    dp [ i ][ j ]  =  parent [ i ];   else  if  ( dp [ i ][ j  -  1 ]  ==  -1 )    dp [ i ][ j ]  =  -1 ;   else    dp [ i ][ j ]  =  dp [ dp [ i ][ j  -  1 ]][ j  -  1 ];   }   int  getKthAncestor ( int  node ,  int  k )  {   for  ( int  j  =  0 ;  j  <  maxLevel  &&  node  !=  -1 ;  ++ j )   if  ( k  &  1  <<  j )   node  =  dp [ node ][ j ];   return  node ;   }   private :   const  int  maxLevel ;   vector < vector < int >>  dp ;   }; "
+}

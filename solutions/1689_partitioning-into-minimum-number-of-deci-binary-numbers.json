@@ -1,0 +1,5 @@
+{
+    "problemName": "partitioning-into-minimum-number-of-deci-binary-numbers",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minPartitions ( string  n )  {   return  ranges :: max ( n )  -  '0' ;   }  }; "
+}

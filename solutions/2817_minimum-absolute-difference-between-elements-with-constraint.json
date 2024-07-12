@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-absolute-difference-between-elements-with-constraint",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minAbsoluteDifference ( vector < int >&  nums ,  int  x )  {   int  ans  =  INT_MAX ;   set < int >  seen ;   for  ( int  i  =  x ;  i  <  nums . size ();  ++ i )  {   seen . insert ( nums [ i  -  x ]);     const  auto  it  =  seen . lower_bound ( nums [ i ]);   if  ( it  !=  seen . cend ())   ans  =  min ( ans ,  * it  -  nums [ i ]);   if  ( it  !=  seen . cbegin ())   ans  =  min ( ans ,  nums [ i ]  -  * prev ( it ));   }   return  ans ;   }  }; "
+}

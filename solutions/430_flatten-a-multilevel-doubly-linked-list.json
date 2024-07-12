@@ -1,0 +1,5 @@
+{
+    "problemName": "flatten-a-multilevel-doubly-linked-list",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   Node *  flatten ( Node *  head ,  Node *  rest  =  nullptr )  {   if  ( head  ==  nullptr )   return  rest ;   head -> next  =  flatten ( head -> child ,  flatten ( head -> next ,  rest ));   if  ( head -> next )   head -> next -> prev  =  head ;   head -> child  =  nullptr ;   return  head ;   }  }; "
+}

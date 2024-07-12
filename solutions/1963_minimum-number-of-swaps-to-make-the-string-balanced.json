@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-number-of-swaps-to-make-the-string-balanced",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minSwaps ( string  s )  {       int  unmatched  =  0 ;   for  ( const  char  c  :  s )   if  ( c  ==  '[' )   ++ unmatched ;   else  if  ( unmatched  >  0 )    -- unmatched ;   return  ( unmatched  +  1 )  /  2 ;   }  }; "
+}

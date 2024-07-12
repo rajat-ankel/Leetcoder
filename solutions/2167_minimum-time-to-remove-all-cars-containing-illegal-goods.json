@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-time-to-remove-all-cars-containing-illegal-goods",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minimumTime ( string  s )  {   const  int  n  =  s . length ();     vector < int >  left ( n );   left [ 0 ]  =  s [ 0 ]  -  '0' ;               vector < int >  dp ( n ,  n );   dp [ 0 ]  =  left [ 0 ]  +  n  -  1 ;   for  ( int  i  =  1 ;  i  <  n ;  ++ i )  {   left [ i ]  =  min ( left [ i  -  1 ]  +  ( s [ i ]  -  '0' )  *  2 ,  i  +  1 );   dp [ i ]  =  min ( dp [ i ],  left [ i ]  +  n  -  1  -  i );   }   return  ranges :: min ( dp );   }  }; "
+}

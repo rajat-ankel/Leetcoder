@@ -1,0 +1,5 @@
+{
+    "problemName": "put-marbles-in-bags",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  putMarbles ( vector < int >&  weights ,  int  k )  {             vector < int >  A ;    long  min  =  0 ;   long  max  =  0 ;   for  ( int  i  =  0 ;  i  +  1  <  weights . size ();  ++ i )   A . push_back ( weights [ i ]  +  weights [ i  +  1 ]);   ranges :: sort ( A );   for  ( int  i  =  0 ;  i  <  k  -  1 ;  ++ i )  {   min  +=  A [ i ];   max  +=  A [ A . size ()  -  1  -  i ];   }   return  max  -  min ;   }  }; "
+}

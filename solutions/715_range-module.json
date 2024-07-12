@@ -1,0 +1,5 @@
+{
+    "problemName": "range-module",
+    "language": "cpp",
+    "code": "addRange(left: int, right: int)"
+}

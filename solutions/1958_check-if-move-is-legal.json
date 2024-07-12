@@ -1,0 +1,5 @@
+{
+    "problemName": "check-if-move-is-legal",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  checkMove ( vector < vector < char >>&  board ,  int  rMove ,  int  cMove ,   char  color )  {   const  vector < pair < int ,  int >>  dirs {{ -1 ,  -1 },  { -1 ,  0 },  { -1 ,  1 },  { 0 ,  -1 },   { 0 ,  1 },  { 1 ,  -1 },  { 1 ,  0 },  { 1 ,  1 }};   for  ( const  auto &  [ dx ,  dy ]  :  dirs )  {   int  cellsCount  =  2 ;   int  i  =  rMove  +  dx ;   int  j  =  cMove  +  dy ;   while  ( 0  <=  i  &&  i  <  8  &&  0  <=  j  &&  j  <  8 )  {     if  ( board [ i ][ j ]  ==  '.' )   break ;     if  ( cellsCount  ==  2  &&  board [ i ][ j ]  ==  color )   break ;     if  ( board [ i ][ j ]  ==  color )   return  true ;   i  +=  dx ;   j  +=  dy ;   ++ cellsCount ;   }   }   return  false ;   }  }; "
+}

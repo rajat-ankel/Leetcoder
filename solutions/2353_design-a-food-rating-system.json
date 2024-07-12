@@ -1,0 +1,5 @@
+{
+    "problemName": "design-a-food-rating-system",
+    "language": "cpp",
+    "code": "changeRating(food: str, newRating: int)"
+}

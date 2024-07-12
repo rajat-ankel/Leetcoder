@@ -1,0 +1,5 @@
+{
+    "problemName": "design-file-system",
+    "language": "cpp",
+    "code": "createPath(path: str, value: int)"
+}

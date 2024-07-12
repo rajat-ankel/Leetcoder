@@ -1,0 +1,5 @@
+{
+    "problemName": "combine-two-tables",
+    "language": "cpp",
+    "code": "SELECT   Person . firstName ,   Person . lastName ,   Address . city ,   Address . state  FROM  Person  LEFT  JOIN  Address   USING  ( personId ); "
+}

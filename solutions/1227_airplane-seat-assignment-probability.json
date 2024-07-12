@@ -1,0 +1,5 @@
+{
+    "problemName": "airplane-seat-assignment-probability",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   double  nthPersonGetsNthSeat ( int  n )  {   return  n  ==  1  ?  1  :  0.5 ;   }  }; "
+}

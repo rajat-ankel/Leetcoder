@@ -1,0 +1,5 @@
+{
+    "problemName": "recyclable-and-low-fat-products",
+    "language": "cpp",
+    "code": "SELECT  product_id  FROM  Products  WHERE  low_fats  =  'Y'  AND  recyclable  =  'Y' ; "
+}

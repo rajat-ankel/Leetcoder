@@ -1,0 +1,5 @@
+{
+    "problemName": "smallest-common-region",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  findSmallestRegion ( vector < vector < string >>&  regions ,  string  region1 ,   string  region2 )  {   unordered_map < string ,  string >  parent ;   unordered_set < string >  ancestors ;    for  ( const  vector < string >&  region  :  regions )   for  ( int  i  =  1 ;  i  <  region . size ();  ++ i )   parent [ region [ i ]]  =  region [ 0 ];     while  ( region1  !=  \"\" )  {   ancestors . insert ( region1 );   region1  =  parent [ region1 ];    }     while  ( ! ancestors . count ( region2 ))   region2  =  parent [ region2 ];   return  region2 ;   }  }; "
+}

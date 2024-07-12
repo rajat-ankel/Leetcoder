@@ -1,0 +1,5 @@
+{
+    "problemName": "paint-house-ii",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minCostII ( vector < vector < int >>&  costs )  {   int  prevIndex  =  -1 ;    int  prevMin1  =  0 ;    int  prevMin2  =  0 ;    for  ( const  vector < int >&  cost  :  costs )  {        int  index  =  -1 ;     int  min1  =  INT_MAX ;     int  min2  =  INT_MAX ;   for  ( int  i  =  0 ;  i  <  cost . size ();  ++ i )  {    const  int  theCost  =  cost [ i ]  +  ( i  ==  prevIndex  ?  prevMin2  :  prevMin1 );   if  ( theCost  <  min1 )  {   index  =  i ;   min2  =  min1 ;   min1  =  theCost ;   }  else  if  ( theCost  <  min2 )  {    min2  =  theCost ;   }   }   prevIndex  =  index ;   prevMin1  =  min1 ;   prevMin2  =  min2 ;   }   return  prevMin1 ;   }  }; "
+}

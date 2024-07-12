@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-eaten-apples",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  eatenApples ( vector < int >&  apples ,  vector < int >&  days )  {   const  int  n  =  apples . size ();   int  ans  =  0 ;   using  P  =  pair < int ,  int > ;    priority_queue < P ,  vector < P > ,  greater <>>  minHeap ;   for  ( int  i  =  0 ;  i  <  n  ||  ! minHeap . empty ();  ++ i )  {      while  ( ! minHeap . empty ()  &&  minHeap . top (). first  <=  i )   minHeap . pop ();     if  ( i  <  n  &&  apples [ i ]  >  0 )   minHeap . emplace ( i  +  days [ i ],  apples [ i ]);     if  ( ! minHeap . empty ())  {   const  auto  [ rottenDay ,  numApples ]  =  minHeap . top ();   minHeap . pop ();   if  ( numApples  >  1 )   minHeap . emplace ( rottenDay ,  numApples  -  1 );   ++ ans ;   }   }   return  ans ;   }  }; "
+}

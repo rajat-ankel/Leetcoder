@@ -1,0 +1,5 @@
+{
+    "problemName": "missing-element-in-sorted-array",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  missingElement ( vector < int >&  nums ,  int  k )  {   int  l  =  0 ;   int  r  =  nums . size ();     auto  nMissing  =  [ & ]( int  i )  {  return  nums [ i ]  -  nums [ 0 ]  -  i ;  };     while  ( l  <  r )  {   const  int  m  =  ( l  +  r )  /  2 ;   if  ( nMissing ( m )  >=  k )   r  =  m ;   else   l  =  m  +  1 ;   }   return  nums [ l  -  1 ]  +  ( k  -  nMissing ( l  -  1 ));   }  }; "
+}

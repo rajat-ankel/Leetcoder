@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-ways-to-build-house-of-cards",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  houseOfCards ( int  n )  {     vector < int >  dp ( n  +  1 );   dp [ 0 ]  =  1 ;   for  ( int  baseCards  =  2 ;  baseCards  <=  n ;  baseCards  +=  3 )   for  ( int  i  =  n ;  i  >=  baseCards ;  -- i )       dp [ i ]  +=  dp [ i  -  baseCards ];   return  dp [ n ];   }  }; "
+}

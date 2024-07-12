@@ -1,0 +1,5 @@
+{
+    "problemName": "find-the-integer-added-to-array-i",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  addedInteger ( vector < int >&  nums1 ,  vector < int >&  nums2 )  {   return  ranges :: min ( nums2 )  -  ranges :: min ( nums1 );   }  }; "
+}

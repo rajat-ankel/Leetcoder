@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-consecutive-values-you-can-make",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  getMaximumConsecutive ( vector < int >&  coins )  {   int  ans  =  1 ;    ranges :: sort ( coins );   for  ( const  int  coin  :  coins )  {   if  ( coin  >  ans )   return  ans ;   ans  +=  coin ;   }   return  ans ;   }  }; "
+}

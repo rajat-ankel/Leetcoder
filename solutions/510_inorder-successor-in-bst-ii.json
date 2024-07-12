@@ -1,0 +1,5 @@
+{
+    "problemName": "inorder-successor-in-bst-ii",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   Node *  inorderSuccessor ( Node *  node )  {     if  ( node -> right )  {   node  =  node -> right ;   while  ( node -> left )   node  =  node -> left ;   return  node ;   }     while  ( node -> parent  &&  node -> parent -> left  !=  node )   node  =  node -> parent ;   return  node -> parent ;   }  }; "
+}

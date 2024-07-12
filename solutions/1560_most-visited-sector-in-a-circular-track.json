@@ -1,0 +1,5 @@
+{
+    "problemName": "most-visited-sector-in-a-circular-track",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   vector < int >  mostVisited ( int  n ,  vector < int >&  rounds )  {                         const  int  start  =  rounds . front ();   const  int  end  =  rounds . back ();   vector < int >  ans ;   for  ( int  i  =  1 ;  i  <=  n ;  ++ i )   if  ( start  <=  end )  {   if  ( start  <=  i  &&  i  <=  end )   ans . push_back ( i );   }  else  {    if  ( i  >=  start  ||  i  <=  end )   ans . push_back ( i );   }   return  ans ;   }  }; "
+}

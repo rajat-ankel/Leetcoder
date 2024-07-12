@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-subarrays-with-gcd-equal-to-k",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  subarrayGCD ( vector < int >&  nums ,  int  k )  {   int  ans  =  0 ;   unordered_map < int ,  int >  gcds ;   for  ( const  int  num  :  nums )   if  ( num  %  k  ==  0 )  {   unordered_map < int ,  int >  nextGcds {{ num ,  1 }};   for  ( const  auto &  [ prevGcd ,  count ]  :  gcds )   nextGcds [ gcd ( prevGcd ,  num )]  +=  count ;   ans  +=  nextGcds [ k ];   gcds  =  move ( nextGcds );   }  else  {     gcds . clear ();   }   return  ans ;   }  }; "
+}

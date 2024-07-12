@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-non-overlapping-subarrays-with-sum-equals-target",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maxNonOverlapping ( vector < int >&  nums ,  int  target )  {     int  ans  =  0 ;   int  prefix  =  0 ;   unordered_set < int >  prefixes { 0 };     for  ( const  int  num  :  nums )  {     prefix  +=  num ;   if  ( prefixes . count ( prefix  -  target ))  {     ++ ans ;   prefix  =  0 ;   prefixes  =  { 0 };   }  else  {   prefixes . insert ( prefix );   }   }   return  ans ;   }  }; "
+}

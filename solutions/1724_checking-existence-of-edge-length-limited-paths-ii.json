@@ -1,0 +1,5 @@
+{
+    "problemName": "checking-existence-of-edge-length-limited-paths-ii",
+    "language": "cpp",
+    "code": "query(p: int, q: int, limit: int)"
+}

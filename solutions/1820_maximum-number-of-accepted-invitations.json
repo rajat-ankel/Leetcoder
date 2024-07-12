@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-accepted-invitations",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maximumInvitations ( vector < vector < int >>&  grid )  {   const  int  m  =  grid . size ();   const  int  n  =  grid [ 0 ]. size ();   int  ans  =  0 ;   vector < int >  mates ( n ,  -1 );    for  ( int  i  =  0 ;  i  <  m ;  ++ i )   if  ( canInvite ( grid ,  i ,  vector < bool > ( n ),  mates ))   ++ ans ;   return  ans ;   }   private :     bool  canInvite ( const  vector < vector < int >>&  grid ,  int  i ,  vector < bool >&&  seen ,   vector < int >&  mates )  {     for  ( int  j  =  0 ;  j  <  seen . size ();  ++ j )  {   if  ( ! grid [ i ][ j ]  ||  seen [ j ])   continue ;   seen [ j ]  =  true ;   if  ( mates [ j ]  ==  -1  ||  canInvite ( grid ,  mates [ j ],  move ( seen ),  mates ))  {   mates [ j ]  =  i ;    return  true ;   }   }   return  false ;   }  }; "
+}

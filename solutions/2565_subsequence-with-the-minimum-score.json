@@ -1,0 +1,5 @@
+{
+    "problemName": "subsequence-with-the-minimum-score",
+    "language": "cpp",
+    "code": "class  Solution :  def  minimumScore ( self ,  s :  str ,  t :  str )  ->  int :    leftmost  =  [ - 1 ]  *  len ( t )    rightmost  =  [ - 1 ]  *  len ( t )  j  =  0   for  i  in  range ( len ( s )):  if  s [ i ]  ==  t [ j ]:  leftmost [ j ]  =  i  j  +=  1  if  j  ==  len ( t ):  break  j  =  len ( t )  -  1   for  i  in  reversed ( range ( len ( s ))):  if  s [ i ]  ==  t [ j ]:  rightmost [ j ]  =  i  j  -=  1  if  j  ==  - 1 :  break    ans  =  j  +  1  j  =  0  for  i  in  range ( len ( t )):    if  leftmost [ i ]  ==  - 1 :  break   while  j  <  len ( t )  and  leftmost [ i ]  >=  rightmost [ j ]:  j  +=  1    if  i  ==  j :  return  0   ans  =  min ( ans ,  j  -  i  -  1 )  return  ans "
+}

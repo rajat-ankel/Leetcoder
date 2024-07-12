@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-number-of-coins-to-be-added",
+    "language": "cpp",
+    "code": "class  Solution  {   public :     int  minimumAddedCoins ( vector < int >&  coins ,  int  target )  {   int  ans  =  0 ;   int  i  =  0 ;    long  miss  =  1 ;    ranges :: sort ( coins );   while  ( miss  <=  target )   if  ( i  <  coins . size ()  &&  coins [ i ]  <=  miss )  {   miss  +=  coins [ i ++ ];   }  else  {       miss  +=  miss ;   ++ ans ;   }   return  ans ;   }  }; "
+}

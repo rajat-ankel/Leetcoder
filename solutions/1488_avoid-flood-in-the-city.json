@@ -1,0 +1,5 @@
+{
+    "problemName": "avoid-flood-in-the-city",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   vector < int >  avoidFlood ( vector < int >&  rains )  {   vector < int >  ans ( rains . size (),  -1 );   unordered_map < int ,  int >  lakeIdToFullDay ;   set < int >  emptyDays ;    for  ( int  i  =  0 ;  i  <  rains . size ();  ++ i )  {   const  int  lakeId  =  rains [ i ];   if  ( lakeId  ==  0 )  {   emptyDays . insert ( i );   continue ;   }   if  ( const  auto  itFullDay  =  lakeIdToFullDay . find ( lakeId );   itFullDay  !=  lakeIdToFullDay . cend ())  {       const  auto  itEmptyDay  =  emptyDays . upper_bound ( itFullDay -> second );   if  ( itEmptyDay  ==  emptyDays . cend ())    return  {};     ans [ * itEmptyDay ]  =  lakeId ;   emptyDays . erase ( itEmptyDay );   }     lakeIdToFullDay [ lakeId ]  =  i ;   }     for  ( const  int  emptyDay  :  emptyDays )   ans [ emptyDay ]  =  1 ;   return  ans ;   }  }; "
+}

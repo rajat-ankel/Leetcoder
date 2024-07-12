@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-and-sum-of-array",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maximumANDSum ( vector < int >&  nums ,  int  numSlots )  {   const  int  n  =  2  *  numSlots ;   const  int  nSelected  =  1  <<  n ;       vector < int >  dp ( nSelected );   nums . resize ( n );   for  ( unsigned  mask  =  1 ;  mask  <  nSelected ;  ++ mask )  {   const  int  selected  =  popcount ( mask );   const  int  slot  =  ( selected  +  1 )  /  2 ;    for  ( int  i  =  0 ;  i  <  n ;  ++ i )   if  ( mask  >>  i  &  1 )    dp [ mask ]  =  max ( dp [ mask ],  dp [ mask  ^  1  <<  i ]  +  ( slot  &  nums [ i ]));   }   return  dp . back ();   }  }; "
+}

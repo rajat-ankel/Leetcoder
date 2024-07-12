@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-number-of-work-sessions-to-finish-the-tasks",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minSessions ( vector < int >&  tasks ,  int  sessionTime )  {   for  ( int  numSessions  =  1 ;  numSessions  <=  tasks . size ();  ++ numSessions )   if  ( dfs ( tasks ,  0 ,  vector < int > ( numSessions ),  sessionTime ))   return  numSessions ;   throw ;   }       bool  dfs ( const  vector < int >&  tasks ,  int  s ,  vector < int >&&  sessions ,   const  int &  sessionTime )  {   if  ( s  ==  tasks . size ())   return  true ;   for  ( int &  session  :  sessions )  {     if  ( session  +  tasks [ s ]  >  sessionTime )   continue ;     session  +=  tasks [ s ];   if  ( dfs ( tasks ,  s  +  1 ,  move ( sessions ),  sessionTime ))   return  true ;     session  -=  tasks [ s ];       if  ( session  ==  0 )   return  false ;   }   return  false ;   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "nim-game",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  canWinNim ( int  n )  {   return  n  %  4  !=  0 ;   }  }; "
+}

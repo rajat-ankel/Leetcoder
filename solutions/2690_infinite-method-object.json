@@ -1,0 +1,5 @@
+{
+    "problemName": "infinite-method-object",
+    "language": "cpp",
+    "code": "function  createInfiniteObject () :  Record < string ,  ()  =>  string >  {   return  new  Proxy (   {},   {   get :  ( _ ,  prop :  string )  =>  ()  =>  prop ,   }   );  } "
+}

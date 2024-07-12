@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-that-makes-result-of-bitwise-and-zero",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  maxNumber ( long  long  n )  {           const  int  i  =  63  -  __builtin_clzll ( n );   return  ( 1L  <<  i )  -  1 ;   }  }; "
+}

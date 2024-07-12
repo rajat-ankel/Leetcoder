@@ -1,0 +1,5 @@
+{
+    "problemName": "online-majority-element-in-subarray",
+    "language": "cpp",
+    "code": "query(left: int, right: int, threshold: int)"
+}

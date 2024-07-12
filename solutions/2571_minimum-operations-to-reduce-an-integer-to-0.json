@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-operations-to-reduce-an-integer-to-0",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minOperations ( int  n )  {                               int  ans  =  0 ;   while  ( n  >  0 )   if  (( n  &  3 )  ==  3 )  {   ++ n ;   ++ ans ;   }  else  if  (( n  &  1 )  ==  1 )  {   -- n ;   ++ ans ;   }  else  {   n  >>=  1 ;   }   return  ans ;   }  }; "
+}

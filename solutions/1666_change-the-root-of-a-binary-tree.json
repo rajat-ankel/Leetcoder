@@ -1,0 +1,5 @@
+{
+    "problemName": "change-the-root-of-a-binary-tree",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   Node *  flipBinaryTree ( Node *  root ,  Node *  leaf )  {   return  reroot ( root ,  leaf ,  nullptr );   }   private :   Node *  reroot ( Node *  root ,  Node *  node ,  Node *  newParent )  {   Node *  oldParent  =  node -> parent ;   node -> parent  =  newParent ;     if  ( node -> left  ==  newParent )   node -> left  =  nullptr ;   if  ( node -> right  ==  newParent )   node -> right  =  nullptr ;     if  ( node  ==  root )   return  node ;   if  ( node -> left )   node -> right  =  node -> left ;   node -> left  =  reroot ( root ,  oldParent ,  node );   return  node ;   }  }; "
+}

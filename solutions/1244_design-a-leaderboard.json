@@ -1,0 +1,5 @@
+{
+    "problemName": "design-a-leaderboard",
+    "language": "cpp",
+    "code": "addScore(playerId: int, score: int)"
+}

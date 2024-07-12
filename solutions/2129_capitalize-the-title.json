@@ -1,0 +1,5 @@
+{
+    "problemName": "capitalize-the-title",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  capitalizeTitle ( string  title )  {   ranges :: transform ( title ,  title . begin (),  :: tolower );   int  i  =  0 ;    int  j  =  0 ;    while  ( j  <  title . length ())  {   while  ( j  <  title . length ()  &&  title [ j ]  !=  ' ' )   ++ j ;   if  ( j  -  i  >  2 )   title [ i ]  =  toupper ( title [ i ]);   i  =  j  +  1 ;   ++ j ;    }   return  title ;   }  }; "
+}

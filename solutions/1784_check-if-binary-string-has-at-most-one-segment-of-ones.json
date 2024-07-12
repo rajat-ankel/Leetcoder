@@ -1,0 +1,5 @@
+{
+    "problemName": "check-if-binary-string-has-at-most-one-segment-of-ones",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  checkOnesSegment ( string  s )  {   return  s . find ( \"01\" )  ==  string :: npos ;   }  }; "
+}

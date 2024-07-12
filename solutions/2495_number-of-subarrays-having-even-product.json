@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-subarrays-having-even-product",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  evenProduct ( vector < int >&  nums )  {   long  ans  =  0 ;   int  numsBeforeEven  =  0 ;            for  ( int  i  =  0 ;  i  <  nums . size ();  ++ i )  {   if  ( nums [ i ]  %  2  ==  0 )   numsBeforeEven  =  i  +  1 ;   ans  +=  numsBeforeEven ;   }   return  ans ;   }  }; "
+}

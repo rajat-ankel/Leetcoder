@@ -1,0 +1,5 @@
+{
+    "problemName": "the-wording-game",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  canAliceWin ( vector < string >&  a ,  vector < string >&  b )  {       vector < vector < string >>  words ( 2 ,  vector < string > ( 26 ));     for  ( const  string &  word  :  a )   words [ 0 ][ word [ 0 ]  -  'a' ]  =  word ;   for  ( const  string &  word  :  b )   words [ 1 ][ word [ 0 ]  -  'a' ]  =  word ;     int  i  =  0 ;   while  ( words [ 0 ][ i ]. empty ())   ++ i ;       for  ( int  turn  =  1 ;  true ;  turn  =  turn  ^  1 )       if  ( ! words [ turn ][ i ]. empty ()  &&  words [ turn ][ i ]  >  words [ turn  ^  1 ][ i ])  {     }  else  if  ( ! words [ turn ][ i  +  1 ]. empty ())  {     ++ i ;   }  else  {     return  turn  ==  1 ;   }   }  }; "
+}

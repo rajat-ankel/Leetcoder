@@ -1,0 +1,5 @@
+{
+    "problemName": "bulb-switcher",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  bulbSwitch ( int  n )  {             return  sqrt ( n );   }  }; "
+}

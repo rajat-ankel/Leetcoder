@@ -1,0 +1,5 @@
+{
+    "problemName": "design-log-storage-system",
+    "language": "cpp",
+    "code": "retrieve(start: str, end: str, granularity: str)"
+}

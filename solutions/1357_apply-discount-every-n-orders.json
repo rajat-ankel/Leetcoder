@@ -1,0 +1,5 @@
+{
+    "problemName": "apply-discount-every-n-orders",
+    "language": "cpp",
+    "code": "getBill(product: List[int], amount: List[int])"
+}

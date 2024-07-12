@@ -1,0 +1,5 @@
+{
+    "problemName": "building-h2o",
+    "language": "cpp",
+    "code": "  #include  <semaphore.h>  class  H2O  {   public :   H2O ()  {   sem_init ( & hSemaphore ,  /*pshared=*/ 0 ,  /*value=*/ 1 );   sem_init ( & oSemaphore ,  /*pshared=*/ 0 ,  /*value=*/ 0 );   }   ~ H2O ()  {   sem_destroy ( & hSemaphore );   sem_destroy ( & oSemaphore );   }   void  hydrogen ( function < void () >  releaseHydrogen )  {   sem_wait ( & hSemaphore );   ++ h ;     releaseHydrogen ();   if  ( h  %  2  ==  0 )   sem_post ( & oSemaphore );   else   sem_post ( & hSemaphore );   }   void  oxygen ( function < void () >  releaseOxygen )  {   sem_wait ( & oSemaphore );     releaseOxygen ();   sem_post ( & hSemaphore );   }   private :   sem_t  hSemaphore ;   sem_t  oSemaphore ;   int  h  =  0 ;  }; "
+}

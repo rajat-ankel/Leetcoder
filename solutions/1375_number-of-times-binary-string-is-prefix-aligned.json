@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-times-binary-string-is-prefix-aligned",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  numTimesAllBlue ( vector < int >&  flips )  {   int  ans  =  0 ;   int  rightmost  =  0 ;   for  ( int  i  =  0 ;  i  <  flips . size ();  ++ i )  {   rightmost  =  max ( rightmost ,  flips [ i ]);       if  ( rightmost  ==  i  +  1 )   ++ ans ;   }   return  ans ;   }  }; "
+}

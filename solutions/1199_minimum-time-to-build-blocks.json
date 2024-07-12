@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-time-to-build-blocks",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minBuildTime ( vector < int >&  blocks ,  int  split )  {   priority_queue < int ,  vector < int > ,  greater <>>  minHeap ;   for  ( const  int  block  :  blocks )   minHeap . push ( block );   while  ( minHeap . size ()  >  1 )  {   minHeap . pop ();    const  int  x  =  minHeap . top ();    minHeap . pop ();   minHeap . push ( x  +  split );   }   return  minHeap . top ();   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "create-hello-world-function",
+    "language": "cpp",
+    "code": "function  createHelloWorld ()  {   return  function  (... _ ) :  string  {   return  'Hello World' ;   };  } "
+}

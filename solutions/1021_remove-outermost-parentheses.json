@@ -1,0 +1,5 @@
+{
+    "problemName": "remove-outermost-parentheses",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  removeOuterParentheses ( string  s )  {   string  ans ;   int  opened  =  0 ;   for  ( const  char  c  :  s )   if  ( c  ==  '(' )  {   if  ( ++ opened  >  1 )   ans  +=  c ;   }  else  if  ( -- opened  >  0 )  {    ans  +=  c ;   }   return  ans ;   }  }; "
+}

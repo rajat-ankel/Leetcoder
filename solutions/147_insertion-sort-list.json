@@ -1,0 +1,5 @@
+{
+    "problemName": "insertion-sort-list",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   ListNode *  insertionSortList ( ListNode *  head )  {   ListNode  dummy ( 0 );   ListNode *  prev  =  & dummy ;    while  ( head  !=  nullptr )  {    ListNode *  next  =  head -> next ;    if  ( prev -> val  >=  head -> val )   prev  =  & dummy ;    while  ( prev -> next  &&  prev -> next -> val  <  head -> val )   prev  =  prev -> next ;   head -> next  =  prev -> next ;   prev -> next  =  head ;   head  =  next ;    }   return  dummy . next ;   }  }; "
+}

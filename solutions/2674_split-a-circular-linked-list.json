@@ -1,0 +1,5 @@
+{
+    "problemName": "split-a-circular-linked-list",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   vector < ListNode *>  splitCircularLinkedList ( ListNode *  list )  {   ListNode *  slow  =  list ;   ListNode *  fast  =  list ;     while  ( fast -> next  !=  list  &&  fast -> next -> next  !=  list )  {   slow  =  slow -> next ;   fast  =  fast -> next -> next ;   }     ListNode *  secondHead  =  slow -> next ;   if  ( fast -> next  ==  list )   fast -> next  =  secondHead ;   else   fast -> next -> next  =  secondHead ;     slow -> next  =  list ;   return  { list ,  secondHead };   }  }; "
+}

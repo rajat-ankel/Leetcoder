@@ -1,0 +1,5 @@
+{
+    "problemName": "prime-number-of-set-bits-in-binary-representation",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  countPrimeSetBits ( int  left ,  int  right )  {       constexpr  int  magic  =  665772 ;   int  ans  =  0 ;   for  ( unsigned  num  =  left ;  num  <=  right ;  ++ num )   if  ( magic  &  1  <<  popcount ( num ))   ++ ans ;   return  ans ;   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "duplicate-emails",
+    "language": "cpp",
+    "code": "SELECT  email  FROM  Person  GROUP  BY  1  HAVING  COUNT ( * )  >  1 ; "
+}

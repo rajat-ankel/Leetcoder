@@ -1,0 +1,5 @@
+{
+    "problemName": "remove-trailing-zeros-from-a-string",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  removeTrailingZeros ( string  num )  {   return  regex_replace ( num ,  regex ( \"0+$\" ),  \"\" );   }  }; "
+}

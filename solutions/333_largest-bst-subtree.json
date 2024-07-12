@@ -1,0 +1,5 @@
+{
+    "problemName": "largest-bst-subtree",
+    "language": "cpp",
+    "code": "struct  T  {   int  min ;    int  max ;    int  size ;   };  class  Solution  {   public :   int  largestBSTSubtree ( TreeNode *  root )  {   return  dfs ( root ). size ;   }   private :   T  dfs ( TreeNode *  root )  {   if  ( root  ==  nullptr )   return  { INT_MAX ,  INT_MIN ,  0 };   T  l  =  dfs ( root -> left );   T  r  =  dfs ( root -> right );   if  ( l . max  <  root -> val  &&  root -> val  <  r . min )   return  { min ( l . min ,  root -> val ),  max ( r . max ,  root -> val ),   1  +  l . size  +  r . size };       return  { INT_MIN ,  INT_MAX ,  max ( l . size ,  r . size )};   }  }; "
+}

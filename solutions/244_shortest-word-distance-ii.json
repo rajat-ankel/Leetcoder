@@ -1,0 +1,5 @@
+{
+    "problemName": "shortest-word-distance-ii",
+    "language": "cpp",
+    "code": "shortest(word1: str, word2: str)"
+}

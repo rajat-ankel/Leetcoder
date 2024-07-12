@@ -1,0 +1,5 @@
+{
+    "problemName": "design-sql",
+    "language": "cpp",
+    "code": "insertRow(name: str, row: List[str])"
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "actors-and-directors-who-cooperated-at-least-three-times",
+    "language": "cpp",
+    "code": "SELECT  actor_id ,  director_id  FROM  ActorDirector  GROUP  BY  1 ,  2  HAVING  COUNT ( * )  >=  3 ; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-substrings-with-fixed-ratio",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  fixedRatio ( string  s ,  int  num1 ,  int  num2 )  {               long  ans  =  0 ;   long  prefix  =  0 ;   unordered_map < long ,  int >  prefixCount {{ 0 ,  1 }};   for  ( const  char  c  :  s )  {   if  ( c  ==  '0' )   prefix  +=  num2 ;   else    prefix  -=  num1 ;   ans  +=  prefixCount [ prefix ];   ++ prefixCount [ prefix ];   }   return  ans ;   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "can-convert-string-in-k-moves",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  canConvertString ( string  s ,  string  t ,  int  k )  {   if  ( s . length ()  !=  t . length ())   return  false ;           vector < int >  shiftCount ( 26 );   for  ( int  i  =  0 ;  i  <  s . length ();  ++ i )   ++ shiftCount [( t [ i ]  -  s [ i ]  +  26 )  %  26 ];   for  ( int  shift  =  1 ;  shift  <  26 ;  ++ shift )   if  ( shift  +  26  *  ( shiftCount [ shift ]  -  1 )  >  k )   return  false ;   return  true ;   }  }; "
+}

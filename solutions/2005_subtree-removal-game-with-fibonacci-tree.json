@@ -1,0 +1,5 @@
+{
+    "problemName": "subtree-removal-game-with-fibonacci-tree",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  findGameWinner ( int  n )  {   return  n  %  6  !=  1 ;   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "adding-spaces-to-a-string",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  addSpaces ( string  s ,  vector < int >&  spaces )  {}  }; "
+}

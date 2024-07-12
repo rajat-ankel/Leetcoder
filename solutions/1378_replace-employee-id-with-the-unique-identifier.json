@@ -1,0 +1,5 @@
+{
+    "problemName": "replace-employee-id-with-the-unique-identifier",
+    "language": "cpp",
+    "code": "SELECT   EmployeeUNI . unique_id ,   Employees . name  FROM  Employees  LEFT  JOIN  EmployeeUNI   USING  ( id ); "
+}

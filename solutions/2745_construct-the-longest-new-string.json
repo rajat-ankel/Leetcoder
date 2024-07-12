@@ -1,0 +1,5 @@
+{
+    "problemName": "construct-the-longest-new-string",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  longestString ( int  x ,  int  y ,  int  z )  {           const  int  mini  =  min ( x ,  y );   if  ( x  ==  y )   return  ( mini  *  2  +  z )  *  2 ;   return  ( mini  *  2  +  1  +  z )  *  2 ;   }  }; "
+}

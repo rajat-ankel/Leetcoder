@@ -1,0 +1,5 @@
+{
+    "problemName": "defanging-an-ip-address",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   string  defangIPaddr ( string  address )  {   return  regex_replace ( address ,  regex ( \"[.]\" ),  \"[.]\" );   }  }; "
+}

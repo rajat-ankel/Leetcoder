@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-weeks-for-which-you-can-work",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  numberOfWeeks ( vector < int >&  milestones )  {     const  int  max  =  ranges :: max ( milestones );   const  long  sum  =  accumulate ( milestones . begin (),  milestones . end (),  0L );   const  long  nonMax  =  sum  -  max ;   return  min ( sum ,  2  *  nonMax  +  1 );   }  }; "
+}

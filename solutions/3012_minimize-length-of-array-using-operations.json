@@ -1,0 +1,5 @@
+{
+    "problemName": "minimize-length-of-array-using-operations",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minimumArrayLength ( vector < int >&  nums )  {               const  int  minNum  =  ranges :: min ( nums );   if  ( ranges :: any_of ( nums ,  [ minNum ]( int  num )  {  return  num  %  minNum  >  0 ;  }))   return  1 ;   return  ( ranges :: count ( nums ,  minNum )  +  1 )  /  2 ;   }  }; "
+}

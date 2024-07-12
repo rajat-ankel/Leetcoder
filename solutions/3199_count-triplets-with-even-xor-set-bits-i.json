@@ -1,0 +1,5 @@
+{
+    "problemName": "count-triplets-with-even-xor-set-bits-i",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  tripletCount ( vector < int >&  a ,  vector < int >&  b ,  vector < int >&  c )  {   const  auto  [ evenA ,  oddA ]  =  getEvenOddBitCount ( a );   const  auto  [ evenB ,  oddB ]  =  getEvenOddBitCount ( b );   const  auto  [ evenC ,  oddC ]  =  getEvenOddBitCount ( c );   return  evenA  *  oddB  *  oddC  +  oddA  *  evenB  *  oddC  +  oddA  *  oddB  *  evenC  +   evenA  *  evenB  *  evenC ;   }   private :       pair < int ,  int >  getEvenOddBitCount ( const  vector < int >&  nums )  {   int  even  =  0 ;   int  odd  =  0 ;   for  ( const  unsigned  num  :  nums )   if  ( popcount ( num )  %  2  ==  0 )   ++ even ;   else   ++ odd ;   return  { even ,  odd };   }  }; "
+}

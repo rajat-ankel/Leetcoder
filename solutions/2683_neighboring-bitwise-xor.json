@@ -1,0 +1,5 @@
+{
+    "problemName": "neighboring-bitwise-xor",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  doesValidArrayExist ( vector < int >&  derived )  {         return  accumulate ( derived . begin (),  derived . end (),  0 ,  bit_xor <> ())  ==  0 ;   }  }; "
+}

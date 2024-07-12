@@ -1,0 +1,5 @@
+{
+    "problemName": "tweet-counts-per-frequency",
+    "language": "cpp",
+    "code": "recordTweet(tweetName: str, time: int)"
+}

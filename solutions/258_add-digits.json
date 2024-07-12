@@ -1,0 +1,5 @@
+{
+    "problemName": "add-digits",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  addDigits ( int  num )  {   return  1  +  ( num  -  1 )  %  9 ;   }  }; "
+}

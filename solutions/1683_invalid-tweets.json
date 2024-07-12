@@ -1,0 +1,5 @@
+{
+    "problemName": "invalid-tweets",
+    "language": "cpp",
+    "code": "SELECT  tweet_id  FROM  Tweets  WHERE  CHAR_LENGTH ( content )  >  15 ; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-valid-subarrays",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  validSubarrays ( vector < int >&  nums )  {                   int  ans  =  0 ;   stack < int >  stack ;   for  ( const  int  num  :  nums )  {   while  ( ! stack . empty ()  &&  stack . top ()  >  num )   stack . pop ();   stack . push ( num );   ans  +=  stack . size ();   }   return  ans ;   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "traffic-light-controlled-intersection",
+    "language": "cpp",
+    "code": "class  TrafficLight  {   public :   void  carArrived (     int  carId ,     int  roadId ,     int  direction ,     function < void () >  turnGreen ,     function < void () >  crossCar   )  {   std :: lock_guard < std :: mutex >  lock ( mutex );   if  ( canPassRoadId  !=  roadId )  {   canPassRoadId  =  roadId ;   turnGreen ();   }   crossCar ();   }   private :   int  canPassRoadId  =  1 ;    std :: mutex  mutex ;  }; "
+}

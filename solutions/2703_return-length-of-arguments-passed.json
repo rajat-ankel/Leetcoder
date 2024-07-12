@@ -1,0 +1,5 @@
+{
+    "problemName": "return-length-of-arguments-passed",
+    "language": "cpp",
+    "code": "type  JSONValue  =   |  null   |  boolean   |  number   |  string   |  JSONValue []   |  {  [ key :  string ] :  JSONValue  };  function  argumentsLength ( ...args :  JSONValue []) :  number  {   return  args . length ;  } "
+}

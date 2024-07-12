@@ -1,0 +1,5 @@
+{
+    "problemName": "insert-into-a-sorted-circular-linked-list",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   Node *  insert ( Node *  head ,  int  insertVal )  {   if  ( head  ==  nullptr )  {   Node *  newNode  =  new  Node ( insertVal );   newNode -> next  =  newNode ;   return  newNode ;   }   Node *  prev  =  head ;   Node *  curr  =  head -> next ;   while  ( curr  !=  head )  {       if  (( prev -> val  <=  insertVal  &&  insertVal  <=  curr -> val )  ||     ( prev -> val  >  curr -> val  &&   ( insertVal  >=  prev -> val  ||  insertVal  <=  curr -> val )))  {     prev -> next  =  new  Node ( insertVal ,  curr );   return  head ;   }   prev  =  prev -> next ;   curr  =  curr -> next ;   }     prev -> next  =  new  Node ( insertVal ,  curr );   return  head ;   }  }; "
+}

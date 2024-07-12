@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-linear-stock-score",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  maxScore ( vector < int >&  prices )  {               unordered_map < int ,  long >  groupIdToSum ;   for  ( int  i  =  0 ;  i  <  prices . size ();  ++ i )   groupIdToSum [ prices [ i ]  -  i ]  +=  prices [ i ];   return  ranges :: max_element ( groupIdToSum ,   []( const  std :: pair < int ,  long >&  p1 ,   const  std :: pair < int ,  long >&  p2 )  {   return  p1 . second  <  p2 . second ;   }) -> second ;   }  }; "
+}

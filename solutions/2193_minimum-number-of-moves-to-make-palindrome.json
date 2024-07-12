@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-number-of-moves-to-make-palindrome",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minMovesToMakePalindrome ( string  s )  {   int  ans  =  0 ;   while  ( s . length ()  >  1 )  {     const  int  i  =  s . find ( s . back ());   if  ( i  ==  s . length ()  -  1 )  {     ans  +=  i  /  2 ;   }  else  {   s . erase ( i ,  1 );   ans  +=  i ;    }   s . pop_back ();   }   return  ans ;   }  }; "
+}

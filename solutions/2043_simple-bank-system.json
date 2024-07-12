@@ -1,0 +1,5 @@
+{
+    "problemName": "simple-bank-system",
+    "language": "cpp",
+    "code": "transfer(account1: int, account2: int, money: int)"
+}

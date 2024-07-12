@@ -1,0 +1,5 @@
+{
+    "problemName": "shortest-impossible-sequence-of-rolls",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  shortestSequence ( vector < int >&  rolls ,  int  k )  {   int  ans  =  1 ;    unordered_set < int >  seen ;   for  ( const  int  roll  :  rolls )  {   seen . insert ( roll );   if  ( seen . size ()  ==  k )  {       ++ ans ;   seen . clear ();   }   }   return  ans ;   }  }; "
+}

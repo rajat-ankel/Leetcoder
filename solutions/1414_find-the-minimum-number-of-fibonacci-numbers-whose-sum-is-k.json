@@ -1,0 +1,5 @@
+{
+    "problemName": "find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  findMinFibonacciNumbers ( int  k )  {   if  ( k  <  2 )    return  k ;   int  a  =  1 ;    int  b  =  1 ;    while  ( b  <=  k )  {       const  int  temp  =  a ;   a  =  b ;   b  =  a  +  temp ;   }   return  1  +  findMinFibonacciNumbers ( k  -  a );   }  }; "
+}

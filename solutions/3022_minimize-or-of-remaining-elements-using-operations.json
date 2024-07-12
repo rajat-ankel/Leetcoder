@@ -1,0 +1,5 @@
+{
+    "problemName": "minimize-or-of-remaining-elements-using-operations",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minOrAfterOperations ( vector < int >&  nums ,  int  k )  {   constexpr  int  kMaxBit  =  30 ;   int  ans  =  0 ;   int  prefixMask  =  0 ;    for  ( int  i  =  kMaxBit ;  i  >=  0 ;  -- i )  {         prefixMask  |=  1  <<  i ;   if  ( getMergeOps ( nums ,  prefixMask ,  ans )  >  k )   ans  |=  1  <<  i ;   }   return  ans ;   }   private :       int  getMergeOps ( const  vector < int >&  nums ,  int  prefixMask ,  int  target )  {   int  mergeOps  =  0 ;   int  ands  =  prefixMask ;   for  ( const  int  num  :  nums )  {   ands  &=  num ;   if  (( ands  |  target )  ==  target )   ands  =  prefixMask ;   else   ++ mergeOps ;    }   return  mergeOps ;   }  }; "
+}

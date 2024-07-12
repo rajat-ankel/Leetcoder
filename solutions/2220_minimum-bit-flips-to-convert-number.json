@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-bit-flips-to-convert-number",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minBitFlips ( unsigned  start ,  unsigned  goal )  {   return  popcount ( start  ^  goal );   }  }; "
+}

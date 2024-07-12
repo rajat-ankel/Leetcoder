@@ -1,0 +1,5 @@
+{
+    "problemName": "two-city-scheduling",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  twoCitySchedCost ( vector < vector < int >>&  costs )  {   const  int  n  =  costs . size ()  /  2 ;   int  ans  =  0 ;           ranges :: sort ( costs ,  []( const  vector < int >&  a ,  const  vector < int >&  b )  {       return  a [ 1 ]  -  a [ 0 ]  >  b [ 1 ]  -  b [ 0 ];   });   for  ( int  i  =  0 ;  i  <  n ;  ++ i )   ans  +=  costs [ i ][ 0 ]  +  costs [ i  +  n ][ 1 ];   return  ans ;   }  }; "
+}

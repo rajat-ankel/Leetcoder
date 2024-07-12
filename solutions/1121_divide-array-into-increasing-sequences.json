@@ -1,0 +1,5 @@
+{
+    "problemName": "divide-array-into-increasing-sequences",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  canDivideIntoSubsequences ( vector < int >&  nums ,  int  k )  {           const  int  n  =  nums . size ();   int  freq  =  1 ;   int  maxFreq  =  1 ;   for  ( int  i  =  1 ;  i  <  n ;  ++ i )  {   freq  =  nums [ i  -  1 ]  <  nums [ i ]  ?  1  :  ++ freq ;   maxFreq  =  max ( maxFreq ,  freq );   }   return  n  >=  maxFreq  *  k ;   }  }; "
+}

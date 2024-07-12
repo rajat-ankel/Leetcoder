@@ -1,0 +1,5 @@
+{
+    "problemName": "patients-with-a-condition",
+    "language": "cpp",
+    "code": "SELECT  *  FROM  Patients  WHERE   conditions  LIKE  'DIAB1%'   OR  conditions  LIKE  '% DIAB1%' ; "
+}

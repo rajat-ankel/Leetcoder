@@ -1,0 +1,5 @@
+{
+    "problemName": "minimum-money-required-before-transactions",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  minimumMoney ( vector < vector < int >>&  transactions )  {   long  ans  =  0 ;   long  losses  =  0 ;       for  ( const  vector < int >&  t  :  transactions )  {   const  int  cost  =  t [ 0 ];   const  int  cashback  =  t [ 1 ];   losses  +=  max ( 0 ,  cost  -  cashback );   }     for  ( const  vector < int >&  t  :  transactions )  {   const  int  cost  =  t [ 0 ];   const  int  cashback  =  t [ 1 ];   if  ( cost  >  cashback )       ans  =  max ( ans ,  losses  +  cashback );   else       ans  =  max ( ans ,  losses  +  cost );   }   return  ans ;   }  }; "
+}

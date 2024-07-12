@@ -1,0 +1,5 @@
+{
+    "problemName": "substring-with-largest-variance",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  largestVariance ( string  s )  {   int  ans  =  0 ;   for  ( char  a  =  'a' ;  a  <=  'z' ;  ++ a )   for  ( char  b  =  'a' ;  b  <=  'z' ;  ++ b )   if  ( a  !=  b )   ans  =  max ( ans ,  kadane ( s ,  a ,  b ));   return  ans ;   }   private :       int  kadane ( const  string &  s ,  char  a ,  char  b )  {   int  ans  =  0 ;   int  countA  =  0 ;   int  countB  =  0 ;   bool  canExtendPrevB  =  false ;   for  ( const  char  c  :  s )  {   if  ( c  !=  a  &&  c  !=  b )   continue ;   if  ( c  ==  a )   ++ countA ;   else   ++ countB ;   if  ( countB  >  0 )  {     ans  =  max ( ans ,  countA  -  countB );   }  else  if  ( countB  ==  0  &&  canExtendPrevB )  {     ans  =  max ( ans ,  countA  -  1 );   }     if  ( countB  >  countA )  {   countA  =  0 ;   countB  =  0 ;   canExtendPrevB  =  true ;   }   }   return  ans ;   }  }; "
+}

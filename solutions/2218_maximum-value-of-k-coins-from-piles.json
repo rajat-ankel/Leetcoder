@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-value-of-k-coins-from-piles",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  maxValueOfCoins ( vector < vector < int >>&  piles ,  int  k )  {   vector < vector < int >>  mem ( piles . size (),  vector < int > ( k  +  1 ));   return  maxValueOfCoins ( piles ,  0 ,  k ,  mem );   }   private :     int  maxValueOfCoins ( const  vector < vector < int >>&  piles ,  int  i ,  size_t  k ,   vector < vector < int >>&  mem )  {   if  ( i  ==  piles . size ()  ||  k  ==  0 )   return  0 ;   if  ( mem [ i ][ k ])   return  mem [ i ][ k ];     int  res  =  maxValueOfCoins ( piles ,  i  +  1 ,  k ,  mem );   int  val  =  0 ;      for  ( int  j  =  0 ;  j  <  min ( piles [ i ]. size (),  k );  ++ j )  {   val  +=  piles [ i ][ j ];   res  =  max ( res ,  val  +  maxValueOfCoins ( piles ,  i  +  1 ,  k  -  j  -  1 ,  mem ));   }   return  mem [ i ][ k ]  =  res ;   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "stone-game-vii",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  stoneGameVII ( vector < int >&  stones )  {   const  int  n  =  stones . size ();   vector < vector < int >>  mem ( n ,  vector < int > ( n ));   vector < int >  prefix ( n  +  1 );   partial_sum ( stones . begin (),  stones . end (),  prefix . begin ()  +  1 );   return  stoneGameVII ( stones ,  0 ,  n  -  1 ,  prefix ,  mem );   }   private :       int  stoneGameVII ( const  vector < int >&  stones ,  int  i ,  int  j ,   const  vector < int >&  prefix ,  vector < vector < int >>&  mem )  {   if  ( i  ==  j )   return  0 ;   if  ( mem [ i ][ j ]  >  0 )   return  mem [ i ][ j ];     const  int  removeLeft  =  prefix [ j  +  1 ]  -  prefix [ i  +  1 ]  -   stoneGameVII ( stones ,  i  +  1 ,  j ,  prefix ,  mem );     const  int  removeRight  =  prefix [ j ]  -  prefix [ i ]  -    stoneGameVII ( stones ,  i ,  j  -  1 ,  prefix ,  mem );   return  mem [ i ][ j ]  =  max ( removeLeft ,  removeRight );   }  }; "
+}

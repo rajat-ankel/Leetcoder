@@ -1,0 +1,5 @@
+{
+    "problemName": "binary-tree-upside-down",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   TreeNode *  upsideDownBinaryTree ( TreeNode *  root )  {   if  ( root  ==  nullptr  ||  root -> left  ==  nullptr )   return  root ;   TreeNode *  newRoot  =  upsideDownBinaryTree ( root -> left );   root -> left -> left  =  root -> right ;    root -> left -> right  =  root ;    root -> left  =  nullptr ;   root -> right  =  nullptr ;   return  newRoot ;   }  }; "
+}

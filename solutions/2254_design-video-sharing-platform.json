@@ -1,0 +1,5 @@
+{
+    "problemName": "design-video-sharing-platform",
+    "language": "cpp",
+    "code": "watch(videoId: int, startMinute: int, endMinute: int)"
+}

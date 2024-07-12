@@ -1,0 +1,5 @@
+{
+    "problemName": "check-if-all-as-appears-before-all-bs",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  checkString ( string  s )  {   return  s . find ( \"ba\" )  ==  string :: npos ;   }  }; "
+}

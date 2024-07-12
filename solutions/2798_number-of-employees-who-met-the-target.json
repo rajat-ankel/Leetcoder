@@ -1,0 +1,5 @@
+{
+    "problemName": "number-of-employees-who-met-the-target",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  numberOfEmployeesWhoMetTarget ( vector < int >&  hours ,  int  target )  {   return  ranges :: count_if ( hours ,   [ target ]( int  hour )  {  return  hour  >=  target ;  });   }  }; "
+}

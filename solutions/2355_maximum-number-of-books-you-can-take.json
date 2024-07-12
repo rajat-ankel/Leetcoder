@@ -1,0 +1,5 @@
+{
+    "problemName": "maximum-number-of-books-you-can-take",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   long  long  maximumBooks ( vector < int >&  books )  {       vector < long >  dp ( books . size ());   stack < int >  stack ;    for  ( int  i  =  0 ;  i  <  books . size ();  ++ i )  {     while  ( ! stack . empty ()  &&   books [ stack . top ()]  >=  books [ i ]  -  ( i  -  stack . top ()))   stack . pop ();     const  int  j  =  stack . empty ()  ?  -1  :  stack . top ();   const  int  lastTook  =  books [ i ]  -  ( i  -  j )  +  1 ;   if  ( lastTook  >  1 )     dp [ i ]  =  static_cast < long > ( books [ i ]  +  lastTook )  *  ( i  -  j )  /  2 ;   else     dp [ i ]  =  static_cast < long > ( books [ i ])  *  ( books [ i ]  +  1 )  /  2 ;   if  ( j  >=  0 )   dp [ i ]  +=  dp [ j ];   stack . push ( i );   }   return  ranges :: max ( dp );   }  }; "
+}

@@ -1,0 +1,5 @@
+{
+    "problemName": "check-if-the-sentence-is-pangram",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  checkIfPangram ( string  sentence )  {   return  unordered_set ( sentence . begin (),  sentence . end ()). size ()  ==  26 ;   }  }; "
+}

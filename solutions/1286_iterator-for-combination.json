@@ -1,0 +1,5 @@
+{
+    "problemName": "iterator-for-combination",
+    "language": "cpp",
+    "code": "class  CombinationIterator  {   public  CombinationIterator ( String  characters ,  int  combinationLength )  {   final  int  n  =  characters . length ();   final  int  k  =  combinationLength ;     for  ( int  mask  =  0 ;  mask  <  1  <<  n ;  mask ++ )  {     if  ( Integer . bitCount ( mask )  ==  k )  {         StringBuilder  curr  =  new  StringBuilder ();   for  ( int  j  =  0 ;  j  <  n ;  j ++ )  {   if  (( mask  &  ( 1  <<  n  -  j  -  1 ))  !=  0 )  {   curr . append ( characters . charAt ( j ));   }   }   combinations . push ( curr . toString ());   }   }   }   public  String  next ()  {   return  combinations . pop ();   }   public  boolean  hasNext ()  {   return  ( ! combinations . isEmpty ());   }   private  Deque < String >  combinations  =  new  ArrayDeque < String > ();  } "
+}

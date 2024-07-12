@@ -1,0 +1,5 @@
+{
+    "problemName": "parallel-courses-ii",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   int  minNumberOfSemesters ( int  n ,  vector < vector < int >>&  relations ,  int  k )  {       vector < int >  dp ( 1  <<  n ,  n );     vector < int >  prereq ( n );   for  ( const  vector < int >&  relation  :  relations )  {   const  int  prevCourse  =  relation [ 0 ]  -  1 ;   const  int  nextCourse  =  relation [ 1 ]  -  1 ;   prereq [ nextCourse ]  |=  1  <<  prevCourse ;   }   dp [ 0 ]  =  0 ;    for  ( int  i  =  0 ;  i  <  dp . size ();  ++ i )  {     int  coursesCanBeTaken  =  0 ;     for  ( int  j  =  0 ;  j  <  n ;  ++ j )   if  (( i  &  prereq [ j ])  ==  prereq [ j ])   coursesCanBeTaken  |=  1  <<  j ;       coursesCanBeTaken  &=  ~ i ;     for  ( unsigned  s  =  coursesCanBeTaken ;  s  >  0 ;   s  =  ( s  -  1 )  &  coursesCanBeTaken )   if  ( popcount ( s )  <=  k )       dp [ i  |  s ]  =  min ( dp [ i  |  s ],  dp [ i ]  +  1 );   }   return  dp . back ();   }  }; "
+}

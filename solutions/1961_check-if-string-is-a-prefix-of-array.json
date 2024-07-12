@@ -1,0 +1,5 @@
+{
+    "problemName": "check-if-string-is-a-prefix-of-array",
+    "language": "cpp",
+    "code": "class  Solution  {   public :   bool  isPrefixString ( string  s ,  vector < string >&  words )  {   string  prefix ;   for  ( const  string &  word  :  words )  {   prefix  +=  word ;   if  ( prefix  ==  s )   return  true ;   }   return  false ;   }  }; "
+}
