@@ -67,9 +67,3 @@ To start the solution submission process, run:
 python leetcoder.py
 
 
-### Scrap Solutions
-
-For Scraping New Solutions, run:
-
-```sh
-python leetscraper.py
