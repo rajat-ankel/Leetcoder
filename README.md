@@ -1,5 +1,9 @@
 # LeetCode Automation Bot
 
+DEMO
+
+https://github.com/user-attachments/assets/405c5aee-ec4c-4c6e-b612-fed974deddd8
+
 This project automates the process of submitting solutions to LeetCode problems. It uses Selenium WebDriver to interact with LeetCode's website and submit solutions from JSON files.
 
 ## Table of Contents
